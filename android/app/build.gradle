@@ -140,6 +140,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled = true
+        missingDimensionStrategy 'react-native-camera', 'general' // <--- insert this line
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
